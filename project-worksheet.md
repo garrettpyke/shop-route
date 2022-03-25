@@ -11,7 +11,7 @@ My capstone SEI bootcamp project will be Shop-Route, a utility for shopping at a
 
 The main user story is the typical shopper who traverses from one side of the store to the other, trying to be efficient while checking off items on their list. Unfortunately, as the list nears completion the shopper finds they forgot to get a certain produce item that happens to be at the far end of the store.
 
-The application will require some initial setup by the user. The user will define how many aisles are in the store (preferably the store they normally frequent) and number them. The application will then section the aisle into 2 sides (left and right) and 3 parts (front, middle and back). For example, '3LM' would indicate aisle 3, left side, middle of the aisle. Assumptions will be made that adjacent aisles are facing each other and that the travel between the 2 facing aisles is minimal. 
+The application would likely require some initial setup by the user. The user could define how many aisles are in the store (preferably the store they normally frequent) and number them. The application will then section the aisle into 2 sides (left and right) and 3 parts (front, middle and back). For example, '3LM' would indicate aisle 3, left side, middle of the aisle. Assumptions will be made that adjacent aisles are facing each other and that the travel between the 2 facing aisles is minimal. 
 
 The user will input a list of items, and the application will sort the list by location and display the location for each item. When the user is "checking off" an item, they will be able to enter its location if the application hasn't already "learned" it. 
 
@@ -29,14 +29,22 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
+#### MVP
+- Allow user to enter items and quantities on shopping list
+- Display location of items
+- If location of an item is not in DB, allow user to enter it and store in DB
+- Sort items by location, and use a logical algorithm for picking items from the opposite aisles as the user moves down the aisle
+- When an item has been "checked off", change font or remove from list
+- Allow user to delete an item
+- Enable user to clear entire list
 
-#### PostMVP EXAMPLE
+#### PostMVP
 
-- Add localStorage or firebase for storage
+- An edit page to allow for item locations to change
+- More specific location information (upper/lower rack and more zones than front, middle & back)
+- Classification of staple items and reminders based on purchase history when user is actively shopping and a certain item isn't on the current list
+- Support for more than 1 store
+- Graphical view of aisles & user's route through store
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
