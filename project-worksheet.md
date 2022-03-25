@@ -16,7 +16,6 @@ The application will require some initial setup by the user. The user will defin
 The user will input a list of items, and the application will sort the list by location and display the location for each item. When the user is "checking off" an item, they will be able to enter its location if the application hasn't already "learned" it. 
 
 Later versions could include more specific location information such as top or bottom rack. Another potential user story is the "I forgot the milk" situation when a person returns from shopping only to find they are out of a certain staple item. In this case, the application could use purchase history to remind the user that they may be low on a certain staple if they happen to be at the store now and the item is not on their list. The application could also be scoped out to include more than one store layout per shopper. Version 1 will not include any of these features.
-d
 
 ## Wireframes
 
