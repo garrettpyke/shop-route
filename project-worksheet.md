@@ -25,10 +25,13 @@ Later versions could include more specific location information such as top or b
 ## Tech Stack: "PDRN"
 - Back-end
 	- Python
-	- Django
+	- Django/Postgres
 - Front-end
 	- React
 	- Node.js
+- Deployment
+	- Back-end: Heroku
+	- Front-end (client): GitHub Pages
 
 ## Wireframes
 
@@ -65,7 +68,10 @@ Based on the initial logic defined in the previous sections, here is a breakdown
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router| 
+| App | Will display components and include React Router | 
+| Login | Allow user to login
+
+| About | About the application & developer
 | Header | This will render the header include the nav | 
 | Footer | This will render the header include the nav | 
 
