@@ -67,13 +67,28 @@ The functionality will be divided into two separate lists: MVP and PostMVP.
 Based on the initial logic defined in the previous sections, here is a breakdown the logic further divided into stateless/stateful components. 
 
 | Component | Description | 
-| --- | :---: |  
-| App | Will display components and include React Router | 
+| --- | :--- |  
+| App | Will display components and include React Router |
 | Login | Allow user to login
+| Item entry | Allow user to enter an item, quantity and location (if known)
+| List | List of Items, Quantities, Locations and a "done" checkbox
+| Button strip | Small div for Sort & Clear buttons 
+| About | About application & developer
+| Header | Render the header including the nav | 
+| Footer | Render the footer | 
 
-| About | About the application & developer
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+## API Routing Table
+| Verb   | URI Pattern            | Token    |  Response |
+|--------|------------------------|----------|-----------|
+| POST   | `/sign-up`             |          | 201 user object |
+| POST   | `/sign-in`             |          | 201 user object with token|
+| PATCH  | `/change-password`     | required | 204  |
+| DELETE | `/sign-out`            | required | 204 |
+| GET | `/items` | required | 200 - array of items created by that user
+| POST | `/items` | required | 201 - item object
+| GET | `/items/:id` | required | 200 - item object
+| DELETE | `/items/:id` | required | 204
+| PATCH | `/items/:id` | required | 200 - item object
 
 #### Estimated Time-frames
 
@@ -91,8 +106,5 @@ This section will list all supporting libraries and their role in the project su
 This section will include a brief code snippet of functionality that I am proud of an a brief description.  Code snippet will not be greater than ~10 lines of code. 
 
 ```
-// for example:
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+// code will be posted here
 ```
