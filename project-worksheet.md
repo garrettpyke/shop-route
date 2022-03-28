@@ -2,8 +2,8 @@
 
 ## Project Links
 
-- [TBD]()
-- [TBD]()
+- [Mobile](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Mobile.pdf)
+- [Desktop](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Desktop.pdf)
 
 ## Project Description
 
