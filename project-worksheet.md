@@ -32,15 +32,14 @@ Later versions could include more specific location information such as top or b
 
 ## Wireframes
 
-Also, define the the React components and the architectural design of your app.
-
 - [Mobile](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Mobile.pdf)
 - [Desktop](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Desktop.pdf)
+- [React front-end components]()
 
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+The functionality will be divided into two separate lists: MVP and PostMVP.  
 
 #### MVP
 - Allow user to enter items and quantities on shopping list
@@ -56,13 +55,13 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - An edit page to allow for item locations to change
 - More specific location information (upper/lower rack and more zones than front, middle & back)
 - Classification of staple items and reminders based on purchase history when user is actively shopping and a certain item isn't on the current list
+- Feature to save frequently used lists of staple items or ingredients for different recipes
 - Support for more than 1 store
 - Graphical view of aisles & user's route through store
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
+Based on the initial logic defined in the previous sections, here is a breakdown the logic further divided into stateless/stateful components. 
 
 | Component | Description | 
 | --- | :---: |  
@@ -70,8 +69,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Header | This will render the header include the nav | 
 | Footer | This will render the header include the nav | 
 
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
+#### Estimated Time-frames
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -80,13 +78,14 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+This section will list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+This section will include a brief code snippet of functionality that I am proud of an a brief description.  Code snippet will not be greater than ~10 lines of code. 
 
 ```
+// for example:
 function reverse(string) {
 	// here is the code to reverse a string of text
 }
