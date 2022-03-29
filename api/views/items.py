@@ -12,4 +12,12 @@ class ItemsView(APIView):
         data = ItemSerializer(items, many=True).data
         return Response(data)
 
-    
+    def post(self, request):
+        request.data['shopper_id'] = request.user.id
+        item = ItemSerializer(data=request.data)
+        if item.is_valid():
+            item.save()
+            return Response(item.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(item.errors, status=status.HTTP_400_BAD_REQUEST)
+
