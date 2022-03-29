@@ -21,3 +21,13 @@ class ItemsView(APIView):
         else:
             return Response(item.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class ItemView(APIView):
+    def get(self, request, pk):
+        item = get_object_or_404(Item, pk=pk)
+        if request.user != item.shopper_id:
+            raise PermissionDenied('Unauthorized, this item belongs to another shopper')
+        else:
+            data = ItemSerializer(item).data
+            return Response(data)
+
+    
