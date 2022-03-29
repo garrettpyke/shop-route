@@ -8,7 +8,8 @@ item_location: string
 
 class Item(models.Model):
     item_name = models.CharField(max_length=50)
-    item_location = models.CharField(max_length=10, blank=True)
+    item_location = models.CharField(max_length=10, blank=True, db_index=True)
+    item_class = models.CharField(max_length=20, blank=True)
     shopper_id = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE
