@@ -30,4 +30,12 @@ class ItemView(APIView):
             data = ItemSerializer(item).data
             return Response(data)
 
+    def delete(self, request, pk):
+        item = get_object_or_404(Item, pk=pk)
+        if request.user != item.shopper_id:
+            raise PermissionDenied('Unauthorized, this item belongs to another shopper')
+        else:
+            item.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
     
