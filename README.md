@@ -90,13 +90,15 @@ Based on the initial logic defined in the previous sections, here is a breakdown
 | DELETE | `/items/:id` | required | 204
 | PATCH | `/items/:id` | required | 200 - item object
 
-#### Estimated Time-frames
+#### Estimated time-frames
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: | 
+| Spin up Django project with dependencies | H | 1 hr| 1.5 hrs | 
+| Set up custom user model & test all routes | H | 3 hrs | 4 hrs |
+| Create Item master model, migrate, add serializer, test all routes | H | 4 hrs |  |
+| Create List model with relationship to Item master, migrate, add serializer, test all routes | H | 4 hr|  | 
+| Total | H | hrs| hrs | 
 
 ## Additional Libraries
 This section will list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
