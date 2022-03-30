@@ -21,5 +21,8 @@ class ShoppingListsView(APIView):
         else:
             return Response(list_item.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+class ShoppingListView(APIView):
+    def get(self, request, pk):
+        list_item = get_object_or_404(ShoppingList, pk=pk)
+               
         
