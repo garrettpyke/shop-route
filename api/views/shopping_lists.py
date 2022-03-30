@@ -22,6 +22,12 @@ class ShoppingListsView(APIView):
         else:
             return Response(list_item.errors, status=status.HTTP_400_BAD_REQUEST)
 
+    def delete(self, request, list_num):
+        shopping_items = ShoppingList.objects.filter(shopper_id=request.user.id)
+        shopping_list_items = shopping_items.filter(list_num=list_num)
+        response_data = shopping_list_items.delete()
+        return Response(response_data, status=status.HTTP_204_NO_CONTENT)
+
 class ShoppingListItemView(APIView):
     def get(self, request, pk):
         list_item = get_object_or_404(ShoppingList, pk=pk)
