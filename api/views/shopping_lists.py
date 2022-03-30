@@ -7,9 +7,10 @@ from ..models.shopping_list import ShoppingList
 from ..serializers.shopping_list import ShoppingListSerializer
 
 class ShoppingListsView(APIView):
-    def get(self, request):
-        list_items = ShoppingList.objects.filter(shopper_id=request.user.id)
-        data = ShoppingListSerializer(list_items, many=True).data
+    def get(self, request, list_num):
+        shopping_items = ShoppingList.objects.filter(shopper_id=request.user.id)
+        shopping_list_items = shopping_items.filter(list_num=list_num)
+        data = ShoppingListSerializer(shopping_list_items, many=True).data
         return Response(data)
 
     def post(self, request):
@@ -24,5 +25,5 @@ class ShoppingListsView(APIView):
 class ShoppingListView(APIView):
     def get(self, request, pk):
         list_item = get_object_or_404(ShoppingList, pk=pk)
-               
+
         
