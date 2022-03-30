@@ -11,4 +11,5 @@ urlpatterns = [
     path('items/', ItemsView.as_view(), name='items'),
     path('items/<int:pk>', ItemView.as_view(), name='items'),
     path('shopping-lists/<int:list_num>', ShoppingListsView.as_view(), name='shopping-lists'),
+    path('shopping-lists/', ShoppingListsView.as_view(), name='shopping-lists')
 ]

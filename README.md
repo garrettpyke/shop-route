@@ -89,7 +89,7 @@ Based on the initial logic defined in the previous sections, here is a breakdown
 | GET | `/items/:id` | required | 200 - item object
 | DELETE | `/items/:id` | required | 204
 | PATCH | `/items/:id` | required | 200 - item object
-| GET | `/shopping-lists` | required | 200 -  array shopping_list items for a specific shopping list for that user
+| GET | `/shopping-lists/:list_num` | required | 200 -  array shopping_list items for a specific shopping list for that user
 | POST | `/shopping-lists` | required | 201 - shopping_list item object
 | DELETE | `/shopping-lists/item/:id` | required | 204 - (allows user to remove item from a specific shopping list)
 | DELETE | `/shopping-lists/:list_num` | required | 204 - allows user to delete an entire shopping list
