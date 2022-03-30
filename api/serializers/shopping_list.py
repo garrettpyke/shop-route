@@ -1,3 +1,7 @@
-from django.db import models
-from django.contrib.auth import get_user_model
+from rest_framework import serializers
 from ..models.shopping_list import ShoppingList
+
+class ShoppingListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShoppingList
+        fields = ('id', 'item_name', 'shopper_id', 'item_qty', 'item_complete', 'added_on', 'list_num')
