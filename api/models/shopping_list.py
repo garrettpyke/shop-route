@@ -12,7 +12,7 @@ list_num: integer, used to differentiate different trips to the store
 # Combination of item_name and list_num should be unique. 
 """     
 
-class Shopping_List(models.Model):
+class ShoppingList(models.Model):
     item_name = models.ForeignKey(
         'Item',
         on_delete=models.DO_NOTHING # we don't want to delete the item from the "master" item list, just from this shopping list

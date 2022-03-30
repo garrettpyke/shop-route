@@ -96,7 +96,7 @@ Based on the initial logic defined in the previous sections, here is a breakdown
 | --- | :---: |  :---: | :---: | 
 | Spin up Django project with dependencies | H | 1 hr| 1.5 hrs | 
 | Set up custom user model & test all routes | H | 3 hrs | 4 hrs |
-| Create Item master model, migrate, add serializer, test all routes | H | 4 hrs |  |
+| Create Item master model, migrate, add serializer, test all routes | H | 4 hrs | 2.5 hrs |
 | Create List model with relationship to Item master, migrate, add serializer, test all routes | H | 4 hr|  | 
 | Total | H | hrs| hrs | 
 
