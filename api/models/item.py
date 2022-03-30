@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 """
 item_name: string, indexed, should be unique
 item_location: string, indexed
+item_class: string (could change to enumeration in version 2)
 """
 
 class Item(models.Model):

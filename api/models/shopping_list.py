@@ -27,4 +27,5 @@ class ShoppingList(models.Model):
     # setting list_num to blank=True for testing
     list_num = models.PositiveIntegerField(blank=True)
 
-
+    def __str__(self):
+        return f"item_num: {self.item_num}, shopper_id: {self.shopper_id}, item_qty: {self.item_qty}, item_complete: {self.item_complete}"    
