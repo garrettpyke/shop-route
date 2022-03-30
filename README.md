@@ -93,8 +93,8 @@ Based on the initial logic defined in the previous sections, here is a breakdown
 | POST | `/shopping-lists` | required | 201 - shopping_list object
 | GET | `/shopping-lists/:list_num` | required | 200 - array shopping_list items for a specific shopping list for that user
 | DELETE | `/shopping-lists/item/:id` | required | 204 - (allows user to remove item from a specific shopping list)
-| DELETE | `/shopping-lists/:id` | required | 204 - allows user to delete an entire shopping list
-| PATCH | `/shopping-lists/:id` | required | - shopping_list item object
+| DELETE | `/shopping-lists/item/:id` | required | 204 - allows user to delete an entire shopping list
+| PATCH | `/shopping-lists/item/:id` | required | - shopping_list item object
 
 
 #### Estimated time-frames
