@@ -8,8 +8,18 @@ from ..serializers.shopping_list import ShoppingListSerializer
 
 class ShoppingListsView(APIView):
     def get(self, request):
-        items = ShoppingList.objects.filter(shopper_id=request.user.id)
-        data = ShoppingListSerializer(items, many=True).data
+        list_items = ShoppingList.objects.filter(shopper_id=request.user.id)
+        data = ShoppingListSerializer(list_items, many=True).data
         return Response(data)
+
+    def post(self, request):
+        request.data['shopper_id'] = request.user.id
+        list_item = ShoppingListSerializer(data=request.data, partial=True)
+        if list_item.is_valid():
+            list_item.save()
+            return Response(list_item.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(list_item.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
         

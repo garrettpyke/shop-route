@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from .item import Item
 
 """
-item_name: string (foreign key)
+item_num: string (foreign key)
 shopper_id: integer (foreign key)
 item_qty: integer
 item_complete: boolean
@@ -13,7 +13,7 @@ list_num: integer, used to differentiate different trips to the store
 """     
 
 class ShoppingList(models.Model):
-    item_name = models.ForeignKey(
+    item_num = models.ForeignKey(
         'Item',
         on_delete=models.DO_NOTHING # we don't want to delete the item from the "master" item list, just from this shopping list
     )
