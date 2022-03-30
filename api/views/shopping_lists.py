@@ -22,8 +22,15 @@ class ShoppingListsView(APIView):
         else:
             return Response(list_item.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class ShoppingListView(APIView):
+class ShoppingListItemView(APIView):
     def get(self, request, pk):
         list_item = get_object_or_404(ShoppingList, pk=pk)
+        if request.user != list_item.shopper_id:
+            raise PermissionDenied('Unauthorized, this item belongs to another shopper')
+        else:
+            data = ShoppingListSerializer(list_item).data
+            return Response(data)
+
+            
 
         
