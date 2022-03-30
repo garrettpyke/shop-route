@@ -31,6 +31,13 @@ class ShoppingListItemView(APIView):
             data = ShoppingListSerializer(list_item).data
             return Response(data)
 
-            
+    def delete(self, request, pk):
+        list_item = get_object_or_404(ShoppingList, pk=pk)
+        if request.user != list_item.shopper_id:
+            raise PermissionDenied('Unauthorized, this item belongs to another shopper')
+        else:
+            list_item.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+                       
 
         
