@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 """
-item_name: string
-item_location: string
+item_name: string, indexed, should be unique
+item_location: string, indexed
 """
 
 class Item(models.Model):
