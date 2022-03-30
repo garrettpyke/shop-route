@@ -38,6 +38,17 @@ class ShoppingListItemView(APIView):
         else:
             list_item.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-                       
 
+    def patch(self, request, pk):
+        list_item = get_object_or_404(ShoppingList, pk=pk)
+        if request.user != list_item.shopper_id:
+            raise PermissionDenied('Unauthorized, this item belongs to another shopper')
+        else:
+            request.data['shopper_id'] = request.user.id
+            updated_list_item = ShoppingListSerializer(list_item, data=request.data, partial=True)
+            if updated_list_item.is_valid():
+                updated_list_item.save()
+                return Response(updated_list_item.data)
+            else:
+                return Response(updated_item.errors, status=status.HTTP_400_BAD_REQUEST)
         
