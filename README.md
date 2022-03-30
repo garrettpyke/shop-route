@@ -107,7 +107,7 @@ Based on the initial logic defined in the previous sections, here is a breakdown
 | Total | H | hrs| hrs | 
 
 ## Additional Libraries
-This section will list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
+- [Django QuerySet API reference](https://docs.djangoproject.com/en/4.0/ref/models/querysets/)
 
 ## Code Snippet
 
