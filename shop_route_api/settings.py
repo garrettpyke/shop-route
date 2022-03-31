@@ -25,9 +25,11 @@ SECRET_KEY = 'django-insecure-fciv(q@+g(e5$cd2)u=e39yc&=yxjxae+a%74s=&cl4=5hobuv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Added these entries to support CORS
 ALLOWED_HOSTS = [
     '1.0.0.127.in-addr.arpa:8000',
-    'localhost'
+    'localhost',
+    '127.0.0.1'
 ]
 
 
