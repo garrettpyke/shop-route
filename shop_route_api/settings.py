@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-fciv(q@+g(e5$cd2)u=e39yc&=yxjxae+a%74s=&cl4=5hobuv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '1.0.0.127.in-addr.arpa:8000',
+    'localhost'
+]
 
 
 # Application definition
@@ -40,12 +43,14 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'rest_framework.authtoken',
-
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+     # CORS middleware, should be placed above CommonMiddleware or WhiteNoiseMiddleware per GitHub docs
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -136,3 +141,12 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'api.User'
+
+# To specify CORS domains:
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:3002',
+]
+
+# CORS_ALLOW_ALL_ORIGINS: True
