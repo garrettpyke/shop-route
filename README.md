@@ -37,7 +37,7 @@ Later versions could include more specific location information such as top or b
 
 - [Mobile](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Mobile.pdf)
 - [Desktop](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Desktop.pdf)
-- [React front-end components]()
+- [React front-end components](https://github.com/garrettpyke/shop-route-client/blob/main/React-component-diagram.pdf)
 
 
 ### MVP/PostMVP - 5min
