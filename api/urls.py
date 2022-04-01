@@ -1,7 +1,7 @@
 from django.urls import path
 from .views.users import SignUp, SignIn, SignOut, ChangePassword
 from .views.items import ItemsView, ItemView
-from .views.shopping_lists import ShoppingListsView, ShoppingListItemView
+from .views.shopping_lists import ShoppingListsView, ShoppingListItemView, ShoppingListsAllView
 
 urlpatterns = [
     path('sign-up/', SignUp.as_view(), name='sign-up'),
@@ -12,5 +12,6 @@ urlpatterns = [
     path('items/<int:pk>', ItemView.as_view(), name='items'),
     path('shopping-lists/<int:list_num>', ShoppingListsView.as_view(), name='shopping-lists'),
     path('shopping-lists/', ShoppingListsView.as_view(), name='shopping-lists'),
-    path('shopping-lists/item/<int:pk>', ShoppingListItemView.as_view(), name='shopping-list-items')
+    path('shopping-lists/item/<int:pk>', ShoppingListItemView.as_view(), name='shopping-list-items'),
+    path('shopping-lists/all/', ShoppingListsAllView.as_view(), name='shopping-lists')
 ]

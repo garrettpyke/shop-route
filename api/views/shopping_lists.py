@@ -28,6 +28,12 @@ class ShoppingListsView(APIView):
         response_data = shopping_list_items.delete()
         return Response(response_data, status=status.HTTP_204_NO_CONTENT)
 
+class ShoppingListsAllView(APIView):
+    def get(self, request):
+        shopping_items = ShoppingList.objects.filter(shopper_id=request.user.id)
+        data = ShoppingListSerializer(shopping_items, many=True).data
+        return Response(data)
+
 class ShoppingListItemView(APIView):
     def get(self, request, pk):
         list_item = get_object_or_404(ShoppingList, pk=pk)
