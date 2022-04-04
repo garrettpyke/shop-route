@@ -22,6 +22,8 @@ class ShoppingList(models.Model):
         on_delete=models.CASCADE # ...but we do want to delete the item if the user goes away as items are user-specific
     )
     item_qty = models.PositiveIntegerField()
+    item_desc = models.CharField(max_length=50, db_index=True)
+    item_loc = models.CharField(max_length=10, blank=True, db_index=True)
     item_complete = models.BooleanField(default=False)
     added_on = models.DateField(auto_now=True)
     # setting list_num to blank=True for testing
