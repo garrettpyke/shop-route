@@ -33,6 +33,11 @@ Later versions could include more specific location information such as top or b
 	- Back-end: Heroku
 	- Front-end (client): GitHub Pages
 
+## Journal
+- Day 1: Flesh out idea, start project worksheet
+- Day 2: Wireframes, finish project worksheet
+- Day 3-5: Back end (including large bug)
+
 ## Wireframes
 
 - [Mobile](https://github.com/garrettpyke/shop-route/blob/main/Wireframe%20-%20Mobile.pdf)

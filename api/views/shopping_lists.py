@@ -22,6 +22,7 @@ class ShoppingListsView(APIView):
         else:
             return Response(list_item.errors, status=status.HTTP_400_BAD_REQUEST)
 
+    # Deletes 1 entire shopping list for 1 user
     def delete(self, request, list_num):
         shopping_items = ShoppingList.objects.filter(shopper_id=request.user.id)
         shopping_list_items = shopping_items.filter(list_num=list_num)
