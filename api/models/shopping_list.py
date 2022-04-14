@@ -10,6 +10,7 @@ item_complete: boolean
 added_on: date
 list_num: integer, used to differentiate different trips to the store
 # Combination of item_name and list_num should be unique. 
+# Values from items table will be queried in ShoppingListSerializer.
 """     
 
 class ShoppingList(models.Model):
