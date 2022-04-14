@@ -19,7 +19,7 @@ class ShoppingList(models.Model):
     )
     shopper_id = models.ForeignKey(
         get_user_model(),
-        on_delete=models.CASCADE # ...but we do want to delete the item if the user goes away as items are user-specific
+        on_delete=models.CASCADE # ...but we do want to delete the item if the user goes away as Items are user-specific
     )
     item_qty = models.PositiveIntegerField()
     item_complete = models.BooleanField(default=False)
