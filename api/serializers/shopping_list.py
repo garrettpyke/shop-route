@@ -2,6 +2,7 @@ from rest_framework import serializers
 from ..models.shopping_list import ShoppingList
 
 class ShoppingListSerializer(serializers.ModelSerializer):
+    # SerializerMethodField calls get_<fieldVariable> by default
     item_name = serializers.SerializerMethodField()
     item_location = serializers.SerializerMethodField()
 
